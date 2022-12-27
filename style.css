@@ -1,0 +1,82 @@
+body{
+    background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+
+}
+#reload{
+  display:none
+} 
+    
+svg {
+    stroke: darkgrey;
+    position: absolute;
+    bottom: 10%;
+    left:50%;
+    transform: translate(-50%,0);
+    stroke-width:4
+    
+}
+.move{
+    animation-name: flight;
+    animation-duration: 5s;  
+    animation-fill-mode: forwards;
+}
+@keyframes flight {
+    from {bottom: 0px;}
+    to {bottom: 100vw; }
+}
+    
+.rockbtn {
+  animation: redbtn 1s infinite alternate;
+}
+
+@keyframes redbtn {
+  to {
+    fill:
+     red;
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 800;
+  }
+}
+
+.path {
+    animation: dash 30s linear infinite;
+    stroke-dasharray: 50;
+}
+#stop{
+    display: none;
+}
+
+.line{
+    position: relative;
+    bottom:5%
+}
+.btn{
+    background-color: #333752; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#downnumber{
+    color:white;
+    font-size: 1rem;
+}
+#svg2{
+    width:100%;
+    position:absolute;
+    bottom:0%;
+    z-index: -1;
+}
